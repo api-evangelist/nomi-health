@@ -1,7 +1,14 @@
 aid: nomi-health
 name: Nomi Health
-description: 'Nomi Health is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Nomi Health is a Utah-based direct healthcare and healthcare fintech company
+  founded in 2019 that operates a payments, claims and analytics platform for self-funded
+  employers, health plans, brokers and providers. Its stack spans real-time provider
+  payments and claims adjudication (Healthcare Financial Services), directly contracted
+  provider networks (Direct Network / Open Network), benefits-data analytics through
+  Artemis by Nomi Health, and direct patient care services. Nomi Health operates authenticated
+  web portals for providers, members and employers, but publishes no public developer
+  program, API reference, or machine-readable specification.'
+image: https://cdn.prod.website-files.com/6536dc5e6afea703703d0814/6536e93a7fa28173391ba2ab_App%201%202.jpg
 url: https://raw.githubusercontent.com/api-evangelist/nomi-health/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +19,14 @@ created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Health
+- Healthcare
+- Payments
+- Financial Services
+- Insurance
+- Benefits
+- Analytics
+- Claims
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,67 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/nomi-health-domain-security.yml
+- type: LLMsTxt
+  url: llms/nomi-health-llms.txt
 - type: Website
+  url: https://www.nomihealth.com/
+- type: About
+  url: https://www.nomihealth.com/about
+- type: Blog
+  url: https://www.nomihealth.com/blog
+- type: Press
+  url: https://www.nomihealth.com/press
+- type: Careers
+  url: https://www.nomihealth.com/careers
+- type: Support
+  url: https://www.nomihealth.com/contact
+- type: SignUp
+  url: https://www.nomihealth.com/pc/join-the-network
+- type: Login
+  url: https://app.nomihealth.com/
+- type: TermsOfService
+  url: https://www.nomihealth.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.nomihealth.com/privacy-policy
+- type: Compliance
+  url: https://www.nomihealth.com/security-controls
+- type: LinkedIn
+  url: https://www.linkedin.com/company/nomi-health/
+- type: Twitter
+  url: https://twitter.com/nomihealth
+- type: Facebook
+  url: https://www.facebook.com/Nomi-Health-106470774923973/
+- type: Instagram
+  url: https://www.instagram.com/nomihealth/
+- type: SecondaryMarket
   url: https://forgeglobal.com/nomi-health_stock/
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Nomi Health ships its payments, claims and analytics platform only through
+    authenticated tenant portals — app.nomihealth.com and provider.nomihealth.com are
+    single-page apps that answer 200 with the same HTML shell for /openapi.json,
+    /swagger.json and every /.well-known/ path — while developer., developers., docs.
+    and api.nomihealth.com do not resolve in DNS, the published sitemap lists no
+    developer or integration page, and the nomihealth GitHub account has zero public
+    repositories.
+  evidence:
+  - url: https://www.nomihealth.com/sitemap.xml
+    status: 200
+  - url: https://www.nomihealth.com/llms.txt
+    status: 404
+  - url: https://www.nomihealth.com/.well-known/security.txt
+    status: 404
+  - url: https://app.nomihealth.com/openapi.json
+    status: 200
+  - url: https://api.github.com/users/nomihealth/repos
+    status: 200
+  checked: '2026-08-04'
