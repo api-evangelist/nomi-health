@@ -8,6 +8,17 @@ description: 'Nomi Health is a Utah-based direct healthcare and healthcare finte
   Artemis by Nomi Health, and direct patient care services. Nomi Health operates authenticated
   web portals for providers, members and employers, but publishes no public developer
   program, API reference, or machine-readable specification.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/6536dc5e6afea703703d0814/6536e93a7fa28173391ba2ab_App%201%202.jpg
 url: https://raw.githubusercontent.com/api-evangelist/nomi-health/refs/heads/main/apis.yml
 x-type: company
